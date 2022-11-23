@@ -9,6 +9,6 @@ from products.views import (
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', ProductLandingPageView.as_view(), name='landing-page'),
-    path('buy/<pk>/', CreateCheckoutSessionView.as_view(), name='buy'),
+    path('buy/<int:pk>/', CreateCheckoutSessionView.as_view(), name='buy'),
 
 ]
