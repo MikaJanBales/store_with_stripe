@@ -1,2 +1,2 @@
-from products import db
+from dream import db
 db.create_all()
