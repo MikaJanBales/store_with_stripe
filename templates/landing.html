@@ -9,8 +9,8 @@
 
 {% block content %}
   <main>
-    {% for one_product in product %}
     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      {% for one_product in product %}
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm border-primary">
           <div class="card-header py-3 text-white bg-primary border-primary">
@@ -28,8 +28,8 @@
           </div>
         </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </main>
   <footer class="pt-4 my-md-5 pt-md-5 border-top"></footer>
 {% endblock %}
