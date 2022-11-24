@@ -10,6 +10,10 @@ from .models import Item
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
+class SuccessView(TemplateView):
+    template_name = 'success.html'
+
+
 class ProductLandingPageView(TemplateView):
     template_name = 'landing.html'
 
@@ -53,9 +57,3 @@ class CreateCheckoutSessionView(View):
         )
 
         return redirect(checkout_session.url, code=303)
-
-    # JsonResponse({
-    #     'id': checkout_session.id
-    # })
-# 'price_1M6yKKCFvr2ln9dx6ojPVwS6'
-# redirect(checkout_session.url, code=303)
