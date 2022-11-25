@@ -15,7 +15,9 @@
           </a>
 
           <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            {% block admin %}
             <a class="me-3 py-2 text-dark text-decoration-none" href="admin/">Admin's panel</a>
+            {% endblock %}
             <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'landing-page' %}">Pricing</a>
           </nav>
         </div>

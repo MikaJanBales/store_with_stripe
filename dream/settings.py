@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-bak_(008o!@&mj=t)hhm7i0(ms&92el*n@h5jqzjy(d(mjaw)h
 DEBUG = True
 
 # changes
-ALLOWED_HOSTS = ['store-with-stripe.herokuapp.com']
+ALLOWED_HOSTS = ['store-with-stripe.herokuapp.com', '127.0.0.1', 'localhost']
 
 # Application definition
 
