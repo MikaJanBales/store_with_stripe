@@ -31,6 +31,10 @@ class ProductLandingPageView(TemplateView):
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
+def meow(request):
+    return render(request, 'meow.html')
+
+
 class CreateCheckoutSessionView(View):
     def post(self, request, pk):
         product_id = pk
