@@ -31,10 +31,6 @@ class ProductLandingPageView(TemplateView):
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
-def meow(request):
-    return render(request, 'meow.html')
-
-
 class CreateCheckoutSessionView(View):
     def post(self, request, pk):
         product_id = pk
@@ -56,8 +52,8 @@ class CreateCheckoutSessionView(View):
                 },
             ],
             mode='payment',
-            success_url='http://127.0.0.1:8000/success/',
-            cancel_url='http://127.0.0.1:8000',
+            success_url='http://store-with-stripe.herokuapp.com/success/',
+            cancel_url='http://store-with-stripe.herokuapp.com',
         )
 
         return redirect(checkout_session.url, code=303)
