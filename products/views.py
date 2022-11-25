@@ -52,8 +52,8 @@ class CreateCheckoutSessionView(View):
                 },
             ],
             mode='payment',
-            success_url='http://store-with-stripe.herokuapp.com/success/',
-            cancel_url='http://store-with-stripe.herokuapp.com',
+            success_url='https://store-with-stripe.herokuapp.com/success/',
+            cancel_url='https://store-with-stripe.herokuapp.com',
         )
 
         return redirect(checkout_session.url, code=303)
